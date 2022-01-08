@@ -31,8 +31,11 @@ vim.opt.signcolumn = "yes"                        -- always show the sign column
 vim.opt.wrap = false                              -- display lines as one long line
 vim.opt.scrolloff = 8                             -- is one of my fav
 vim.opt.sidescrolloff = 8                         -- minimum number of colums to scroll horizontally
+vim.opt.hidden = true                             -- current buffer can be put in bg w/o writing to disk
 vim.opt.backspace = { "indent", "eol", "start" }  -- more powerfule backspacing
+vim.opt.list = true
 
+vim.cmd [[set listchars=tab:▸\ ,trail:•]]
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 
