@@ -68,3 +68,6 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
+-- Custom ledger function
+keymap("n", "<leader>c", "<cmd>lua require('user.ledger').calculateAndReplace()<CR>", opts)
+
