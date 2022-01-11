@@ -12,5 +12,5 @@ require "user.comment"
 require "user.bufferline"
 require "user.toggleterm"
 
-require "user.utils"
+require "user.autocommands"
 
