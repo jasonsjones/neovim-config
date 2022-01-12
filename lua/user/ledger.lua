@@ -1,7 +1,7 @@
 local M = {}
 
-function mathEval(exp)
-  return load("return " .. exp, exp, "t", math)()
+local function mathEval(exp)
+    return load("return " .. exp, exp, "t", math)()
 end
 
 
