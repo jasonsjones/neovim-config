@@ -1,0 +1,25 @@
+{
+    "Today": {
+        "prefix": "now",
+        "body": "$CURRENT_MONTH/$CURRENT_DATE  $1",
+        "description": "Insert the current month/day"
+
+    },
+    "Checking Asset": {
+        "prefix": "abc",
+        "body": "Assets:Bank:Checking",
+        "description": "Insert checking asset account"
+
+    },
+    "Joint Visa Liability": {
+        "prefix": "lvj",
+        "body": "Liabilities:Visa:Joint",
+        "description": "Insert joint visa liability account"
+
+    },
+    "Sales Tax": {
+        "prefix": "st",
+        "body": "Expenses:Tax:Sales                                  $${1:amount}",
+        "description": "Add sales tax expense"
+    }
+}

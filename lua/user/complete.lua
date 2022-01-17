@@ -8,6 +8,8 @@ if not snip_status_ok then
     return
 end
 
+-- Add custom snippet dir to runtimepath
+vim.o.runtimepath = vim.o.runtimepath .. ",~/.config/nvim/snippets"
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
