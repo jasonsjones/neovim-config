@@ -69,5 +69,8 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Custom ledger function
-keymap("n", "<leader>lc", "<cmd>lua require('user.ledger').calculateAndReplace()<CR>", opts)
-
+keymap("n", "<leader>ld", "<cmd>lua require('user.ledger').calculateAndReplace()<CR>", opts)
+-- Search for all uncleared transactions in ledger file
+keymap("n", "<leader>ls", "/^\\d\\{2}\\/\\d\\{2}\\s\\+\\(\\*\\)\\@!/e<CR>", opts)
+-- Clear ledger transaction
+keymap("n", "<leader>lc", "i*<ESC>", opts)
