@@ -11,7 +11,7 @@ end
 vim.cmd([[
     augroup CustomColors
         autocmd!
-        autocmd BufEnter * highlight CursorLineNR guifg=#ffe162
+        autocmd VimEnter * highlight CursorLineNR guifg=#ffe162
     augroup end
 ]])
 
