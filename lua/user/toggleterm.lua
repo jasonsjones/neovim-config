@@ -13,17 +13,9 @@ toggleterm.setup({
     start_in_insert = true,
     insert_mappings = true,
     persist_size = true,
-    direction = "float",
+    direction = "horizontal",
     close_on_exit = true,
     shell = vim.o.shell,
-    float_opts = {
-        border = "curved",
-        winblend = 0,
-        highlights = {
-            border = "Normal",
-            background = "Normal",
-        },
-    },
 })
 
 function _G.set_terminal_keymaps()
@@ -48,6 +40,15 @@ local node = Terminal:new({
 local lazygit = Terminal:new({
     cmd = "lazygit",
     hidden = true,
+    direction = "float",
+    float_opts = {
+        border = "curved",
+        winblend = 0,
+        highlights = {
+            border = "Normal",
+            background = "Normal",
+        },
+    },
     on_open = function()
         vim.cmd("startinsert!")
     end
