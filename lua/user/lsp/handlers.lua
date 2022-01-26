@@ -83,6 +83,7 @@ end
 
 M.on_attach = function(client, bufnr)
     if client.name == "tsserver" then
+        -- disable the lsp formatting mechanism in tsserver; formatting is handled by null-ls
         client.resolved_capabilities.document_formatting = false
     end
     lsp_keymaps(bufnr)
