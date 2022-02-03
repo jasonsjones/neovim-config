@@ -13,6 +13,7 @@ require "user.comment"
 require "user.bufferline"
 require "user.lualine"
 require "user.toggleterm"
+require "user.vimwiki"
 
 require "user.autocommands"
 
