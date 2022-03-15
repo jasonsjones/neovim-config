@@ -1,4 +1,4 @@
-local colorscheme = "onedark"
+local colorscheme = "nord"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
@@ -14,4 +14,9 @@ vim.cmd([[
         autocmd VimEnter * highlight CursorLineNR guifg=#ffe162
     augroup end
 ]])
+
+vim.g.nord_borders = true
+vim.g.nord_disable_background = true
+
+require("nord").set()
 
