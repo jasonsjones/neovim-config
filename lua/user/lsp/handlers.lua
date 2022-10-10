@@ -46,7 +46,7 @@ end
 
 local function lsp_highlight_document(client)
     -- Set autocommands conditional on server_capabilities
-    if client.resolved_capabilities.document_highlight then
+    if client.server_capabilities.document_highlight then
         vim.cmd( [[
             augroup lsp_document_highlight
                 autocmd! * <buffer>
@@ -84,7 +84,7 @@ end
 M.on_attach = function(client, bufnr)
     if client.name == "tsserver" then
         -- disable the lsp formatting mechanism in tsserver; formatting is handled by null-ls
-        client.resolved_capabilities.document_formatting = false
+        client.server_capabilities.documentFormattingProvider = false
     end
     lsp_keymaps(bufnr)
     lsp_highlight_document(client)
