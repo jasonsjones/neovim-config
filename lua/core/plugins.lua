@@ -18,7 +18,7 @@ local PackerGroup = vim.api.nvim_create_augroup('Packer', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePost', {
     group = PackerGroup,
     pattern = 'plugins.lua',
-    command = 'source <afile> | PackerSync'
+    command = 'source <afile> | PackerCompile'
 })
 
 -- Use a protected call so we don't error out on first use
@@ -33,10 +33,8 @@ return packer.startup(function(use)
     -- Packer can manage itself
     use "wbthomason/packer.nvim"
 
-
     -- colorscheme
     use "shaunsingh/nord.nvim"
-
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

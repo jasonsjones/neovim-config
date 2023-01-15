@@ -1,5 +1,5 @@
 -- nvim config v2
-require "custom"
+require "core"
 
 
 -- nvim config v1
