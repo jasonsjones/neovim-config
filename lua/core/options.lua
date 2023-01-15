@@ -1,4 +1,4 @@
--- :help options
+-- :help option-list
 
 -- Enable mouse mode
 vim.opt.mouse = "a"
@@ -28,7 +28,7 @@ vim.opt.showtabline = 2
 -- Set term gui colors (most terminals support this)
 vim.opt.termguicolors = true
 
--- Show 8 lines at bottom before scrolling off 
+-- Show 8 lines at bottom before scrolling off
 vim.opt.scrolloff = 8
 
 -- Minimum number of colums to scroll horizontally
@@ -73,21 +73,26 @@ vim.opt.backspace = { "indent", "eol", "start" }
 -- Set completeopt to have a better completion experience
 vim.opt.completeopt = { "menuone", "noselect" }
 
+-- Show <Tab> and <EOL>
 vim.opt.list = true
 
-vim.cmd [[set listchars=tab:▸\ ,trail:•]]
+-- Characters for displaying in list mode
+vim.opt.listchars = { tab = "▸\\", trail = "•" }
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
+-- Allow specified keys to cross line boundaries
+vim.opt.whichwrap:append("<,>,[,],h,l")
 
-vim.cmd [[set iskeyword+=-]]
+-- Characters included in keywords
+vim.opt.iskeyword:append("-")
 
--- current buffer can be put in bg w/o writing to disk
+-- Current buffer can be put in bg w/o writing to disk
 vim.opt.hidden = true
 
 -- The encoding written to a file
 vim.opt.fileencoding = "utf-8"
 
-
+-- Display lines as one long line
+vim.opt.wrap = false
 
 
 --[[
@@ -107,11 +112,9 @@ vim.opt.splitright = tru
 -- Time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.timeoutlen = 1000
 
--- If a file is being edited by another program (or was written to 
+-- If a file is being edited by another program (or was written to
 -- while editing with another program), it is not allowed to be edited
 vim.opt.writebackup = false
 
--- display lines as one long line
-vim.opt.wrap = false
 
 --]]
