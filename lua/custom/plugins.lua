@@ -13,13 +13,13 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     vim.cmd [[packadd packer.nvim]]
 end
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd [[
-    augroup packer_user_config
-        autocmd!
-        autocmd BufWritePost plugins.lua source <afile> | PackerSync
-    augroup end
-]]
+-- Autocommand that reloads neovim whenever this file is saved
+local PackerGroup = vim.api.nvim_create_augroup('Packer', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePost', {
+    group = PackerGroup,
+    pattern = 'plugins.lua',
+    command = 'source <afile> | PackerSync'
+})
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
@@ -28,7 +28,7 @@ if not status_ok then
 end
 
 -- Install plugins here
-return packer.startup(function(use) 
+return packer.startup(function(use)
 
     -- Packer can manage itself
     use "wbthomason/packer.nvim"
