@@ -33,8 +33,15 @@ return packer.startup(function(use)
     -- Packer can manage itself
     use "wbthomason/packer.nvim"
 
-    -- colorscheme
+    -- Colorscheme
     use "shaunsingh/nord.nvim"
+
+    -- Fuzzy Finder (files, lsp, etc)
+    use {
+        "nvim-telescope/telescope.nvim",
+        branch = "0.1.x",
+        requires = { "nvim-lua/plenary.nvim" }
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
