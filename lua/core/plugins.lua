@@ -43,6 +43,10 @@ return packer.startup(function(use)
         requires = { "nvim-lua/plenary.nvim" }
     }
 
+
+    -- Treesitter for syntax highlighting and much more...
+    use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
