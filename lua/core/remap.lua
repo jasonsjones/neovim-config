@@ -1,5 +1,4 @@
 local opts = { silent = true }
-local term_opts = { silent = true }
 
 -- Remap space a leader key
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", opts)
