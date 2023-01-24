@@ -34,6 +34,12 @@ vim.opt.scrolloff = 8
 -- Minimum number of colums to scroll horizontally
 vim.opt.sidescrolloff = 8
 
+-- Force all horizontal splits to go below current window
+vim.opt.splitbelow = true
+
+-- Force all vertical splits to go to the right of current window
+vim.opt.splitright = true
+
 -- Ignore case in search patterns
 vim.opt.ignorecase = true
 
@@ -102,12 +108,6 @@ vim.opt.conceallevel = 0
 
 -- Pop up menu height
 vim.opt.pumheight = 15
-
--- Force all horizontal splits to go below current window
-vim.opt.splitbelow = true
-
--- Force all vertical splits to go to the right of current window
-vim.opt.splitright = tru
 
 -- Time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.timeoutlen = 1000
