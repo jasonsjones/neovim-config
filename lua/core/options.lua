@@ -22,6 +22,10 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 
+-- Softwrap at window width, break on words
+vim.opt.wrap = true
+vim.opt.linebreak = true
+
 -- Always show tabs
 vim.opt.showtabline = 2
 
@@ -96,9 +100,6 @@ vim.opt.hidden = true
 
 -- The encoding written to a file
 vim.opt.fileencoding = "utf-8"
-
--- Display lines as one long line
-vim.opt.wrap = false
 
 
 --[[
