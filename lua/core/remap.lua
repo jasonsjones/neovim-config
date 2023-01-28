@@ -28,6 +28,10 @@ vim.keymap.set("i", "?", "?<c-g>u", opts)
 --    Normal     --
 vim.keymap.set("n", "<leader>fe", vim.cmd.Ex, { desc = "[F]ile [E]xplorer" })
 
+-- Handle wrapped lines as expected
+vim.keymap.set("n", "j", "gj", opts)
+vim.keymap.set("n", "k", "gk", opts)
+
 -- Better window navigation
 vim.keymap.set ("n", "<C-h>", "<C-w>h", opts)
 vim.keymap.set ("n", "<C-j>", "<C-w>j", opts)
