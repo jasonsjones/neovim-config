@@ -21,9 +21,21 @@ autocmd("TextYankPost", {
 
 -- Local setting for markdown files
 local MarkdownConfig = augroup("MarkdownConfig", { clear = true })
-autocmd("BufEnter", {
+autocmd({ "BufEnter", "BufWinEnter" }, {
     group = MarkdownConfig,
     pattern = "*.md",
-    command = "setlocal spell spelllang=en_us"
+    callback = function()
+        vim.opt_local.spell = true
+        vim.opt_local.spelllang = "en_us"
+        vim.cmd("silent! loadview")
+    end
+})
+
+autocmd("BufWinLeave", {
+    group = MarkdownConfig,
+    pattern = "*.md",
+    callback = function()
+        vim.cmd("mkview")
+    end
 })
 
