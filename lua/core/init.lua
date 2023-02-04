@@ -1,6 +1,8 @@
 require "core.options"
-require "core.plugins"
-require "core.remap"
-require "core.colorscheme"
+require "core.lazy"
 require "core.autocommands"
+require "core.lsp"
+require "core.telescope"
+require "core.treesitter"
+require "core.remap"
 
