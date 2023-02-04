@@ -28,28 +28,6 @@ vim.keymap.set("i", "?", "?<c-g>u", opts)
 --    Normal     --
 vim.keymap.set("n", "<leader>fe", vim.cmd.Ex, { desc = "[F]ile [E]xplorer" })
 
--- Handle wrapped lines as expected
-vim.keymap.set("n", "j", function()
-    -- lua ternary style:
-    -- return vim.v.count == 0 and "gj" or "j"
-    --
-    if vim.v.count == 0 then
-        return "gj"
-    end
-    return "j"
-end, { silent = true, expr = true })
-
-vim.keymap.set("n", "k", function()
-    -- lua ternary style:
-    -- return vim.v.count == 0 and "gk" or "k"
-    --
-    if vim.v.count == 0 then
-        return "gk"
-    end
-    return "k"
-end, { silent = true, expr = true })
-
-
 -- Better window navigation
 vim.keymap.set ("n", "<C-h>", "<C-w>h", opts)
 vim.keymap.set ("n", "<C-j>", "<C-w>j", opts)

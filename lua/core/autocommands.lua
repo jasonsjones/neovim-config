@@ -25,8 +25,6 @@ autocmd({ "BufEnter", "BufWinEnter" }, {
     group = MarkdownConfig,
     pattern = "*.md",
     callback = function()
-        vim.opt_local.spell = true
-        vim.opt_local.spelllang = "en_us"
         vim.cmd("silent! loadview")
     end
 })
