@@ -3,7 +3,7 @@ local autocmd = vim.api.nvim_create_autocmd
 
 -- Remove trailing whitespace on save (for all files)
 local TrailingWhitespace = augroup("TrailingWhitespace", { clear = true })
-autocmd({"BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
     group = TrailingWhitespace,
     pattern = "*",
     command = [[%s/\s\+$//e]]
@@ -36,4 +36,3 @@ autocmd("BufWinLeave", {
         vim.cmd("mkview")
     end
 })
-

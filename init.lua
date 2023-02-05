@@ -1,7 +1,8 @@
--- nvim config v2
-require "core"
+require("config")
 
+-- nvim config v2
+-- require "v2"
 
 -- nvim config v1
---require "user"
+-- require "v1"
 

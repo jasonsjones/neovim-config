@@ -49,13 +49,19 @@ return {
     {
         "nvim-telescope/telescope.nvim",
         branch = "0.1.x",
-        dependencies = { "nvim-lua/plenary.nvim" }
+        dependencies = { "nvim-lua/plenary.nvim" },
+        config = function ()
+            require("config.telescope")
+        end
     },
 
     -- Treesitter for syntax highlighting and much more...
     {
         "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate"
+        build = ":TSUpdate",
+        config = function ()
+            require("config.treesitter")
+        end
     },
 
     {
@@ -77,7 +83,10 @@ return {
             -- Snippets
             {"L3MON4D3/LuaSnip"},             -- Required
             {"rafamadriz/friendly-snippets"}, -- Optional
-        }
+        },
+        config = function ()
+            require("config.lsp")
+        end
     }
 }
 
