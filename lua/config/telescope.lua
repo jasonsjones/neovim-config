@@ -7,7 +7,8 @@ local builtin = require("telescope.builtin")
 telescope.setup({
     defaults = {
         file_ignore_patterns = {
-            "node_modules"
+            "node_modules",
+            "dist"
         },
         mappings = {
             i = {
