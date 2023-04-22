@@ -1,4 +1,3 @@
--- require "core.gitsigns"
 return {
     {
         -- Colorscheme
@@ -64,6 +63,7 @@ return {
         end
     },
 
+    -- LSP setup
     {
         "VonHeikemen/lsp-zero.nvim",
         dependencies = {
